@@ -2,6 +2,7 @@ class ATM(object):
   def __init__(self,money,bank_name):
     self.money=money
     self.bank_name=bank_name
+    self.withdrawals_list=[]
   def withdraw(self,request):
     print "Welcome to ",self.bank_name
     print "Current Balance ",self.money
@@ -21,4 +22,8 @@ class ATM(object):
       else:
         index+=1
     self.money=given
+    self.withdrawals_list.append(request)
     print "=================================="
+  def show_withdrawals(self):
+    for withdrawal in self.withdrawals_list:
+        print(withdrawal)  
