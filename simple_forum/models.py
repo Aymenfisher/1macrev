@@ -26,7 +26,13 @@ class MemberStore(object):
 		for n in all_members:
 			if n.id==id:
 				result=n
-		return n		
+		return n	
+	def entity_exists(self,member):
+		if member in MemberStore.members:
+			return True
+		else:
+			return False
+
 
 		
 
@@ -46,6 +52,10 @@ class PostStore(object):
 		
 	def get_all(self):
 		return PostStore.posts
-		
+	def entity_exists(self,member):
+		if member in PostStore.posts:
+			return True
+		else:
+			return False
 
 		
