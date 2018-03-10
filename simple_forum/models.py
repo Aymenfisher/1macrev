@@ -32,6 +32,13 @@ class MemberStore(object):
 			return True
 		else:
 			return False
+	def delete(self,id):
+		all_members=MemberStore.members
+		for n in all_members:
+			print n.id
+			if n.id==id:
+				MemberStore.members.remove(n)
+			
 
 
 		
@@ -57,5 +64,9 @@ class PostStore(object):
 			return True
 		else:
 			return False
-
-		
+	def delete(self,id):
+		all_posts=PostStore.posts
+		for n in all_posts:
+			print n.id
+			if n.id==id:
+				PostStore.posts.remove(n)

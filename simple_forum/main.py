@@ -16,5 +16,4 @@ post_store.add(post3)
 member_store.get_all()
 post_store.get_all()
 
-print member_store.entity_exists(post3)
-print post_store.entity_exists(post1)
+
